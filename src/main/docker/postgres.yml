@@ -1,0 +1,10 @@
+version: '2'
+services:
+  userservice-postgresql:
+    image: postgres:11
+    environment:
+    - POSTGRES_DB=users
+    - POSTGRES_USER=usersuser
+    - POSTGRES_PASSWORD=docker
+    ports:
+    - 5440:5432
