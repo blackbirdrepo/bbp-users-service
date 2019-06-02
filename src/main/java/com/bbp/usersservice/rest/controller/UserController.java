@@ -38,7 +38,7 @@ public class UserController {
     public ResponseEntity<UserRestResponseDto> createUser(@RequestBody UserCreateRestRequestDto restDto) {
         var facadeDto = mapper.toCreateFacadeRequest(restDto);
         var user = facade.createUser(facadeDto);
-        //TODO fix null in location
+        //TODO fix null in resource location
         return ResponseEntity.created(null).body(mapper.toRestResponse(user));
     }
 

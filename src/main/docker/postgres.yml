@@ -1,3 +1,4 @@
+#UNUSED. ACTUAL docker image in pom.xml
 version: '2'
 services:
   userservice-postgresql:
@@ -7,4 +8,4 @@ services:
     - POSTGRES_USER=usersuser
     - POSTGRES_PASSWORD=docker
     ports:
-    - 5440:5432
+    - 5430:5432

@@ -34,7 +34,7 @@ public class UserFacade {
         return userService.readUsers(pageable);
     }
 
-    //TODO implement email code sending
+    //TODO implement activation code sending via email
     public User createUser(UserCreateFacadeRequestDto requestDto) {
         var serviceRequestDto = mapper.toCreateServiceRequest(requestDto);
         serviceRequestDto.setRole(roleService.readRole(requestDto.getRoleId()));

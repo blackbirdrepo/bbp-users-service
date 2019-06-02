@@ -29,6 +29,7 @@ public class User extends AbstractAuditEntity {
 
     private String lastName;
 
+    @Column(nullable = false, unique = true)
     private String email;
 
     private String passwordHash;
@@ -37,6 +38,7 @@ public class User extends AbstractAuditEntity {
 
     private GenderEnum gender;
 
+    @Column(nullable = false)
     private boolean active = true;
 
     @ManyToOne

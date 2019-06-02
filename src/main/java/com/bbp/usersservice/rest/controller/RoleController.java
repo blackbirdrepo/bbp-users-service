@@ -37,7 +37,7 @@ public class RoleController {
     public ResponseEntity<RoleRestResponseDto> createRole(@RequestBody RoleCreateUpdateRestRequestDto restDto) {
         var facadeDto = mapper.toCreateUpdateFacadeRequest(restDto);
         var role = facade.createRole(facadeDto);
-        //TODO fix null in location
+        //TODO fix null in resource location
         return ResponseEntity.created(null).body(mapper.toRestResponse(role));
     }
 

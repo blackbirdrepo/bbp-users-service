@@ -21,8 +21,10 @@ public class Role extends AbstractAuditEntity {
     @SequenceGenerator(allocationSize = 1, sequenceName = "seq_role", name = "seq_role")
     private Long id;
 
+    @Column(nullable = false, unique = true)
     private String name;
 
+    @Column(nullable = false)
     private boolean active = true;
 
     @ElementCollection
