@@ -22,6 +22,19 @@ spring:
     driver-class-name: 'org.postgresql.Driver'
 server:
   port: 8030
+info:
+  app:
+    name: ${spring.application.name}
+    description: Users Service Application. Handle all users related logic
+    version: 1.0.0
+
+management:
+  endpoints.web.exposure.include: '*'
+  endpoint.health.show-details: always
+  security.enabled: false
+endpoints.health.sensitive: false
+
+
 eureka:
   client:
     registryFetchIntervalInSeconds: 10
